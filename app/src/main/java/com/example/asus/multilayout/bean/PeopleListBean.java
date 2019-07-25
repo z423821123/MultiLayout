@@ -15,10 +15,21 @@ public class PeopleListBean implements IMainBean{
 
     public List<PeopleBean> peopleBeanList;
 
+
+    public PeopleListBean() {
+    }
+
     public PeopleListBean(@NonNull List<PeopleBean> peopleHot) {
         this.peopleBeanList = peopleBeanList;
     }
 
+    public List<PeopleBean> getPeopleBeanList() {
+        return peopleBeanList;
+    }
+
+    public void setPeopleBeanList(List<PeopleBean> peopleBeanList) {
+        this.peopleBeanList = peopleBeanList;
+    }
 
     @Override
     public int type(IMainTypeFactory typeFactory) {

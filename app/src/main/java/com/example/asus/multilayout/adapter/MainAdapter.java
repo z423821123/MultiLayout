@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.example.asus.multilayout.bean.IMainBean;
+import com.example.asus.multilayout.bean.PeopleListBean;
 import com.example.asus.multilayout.type.IMainTypeFactory;
 import com.example.asus.multilayout.holder.MainViewHolder;
 

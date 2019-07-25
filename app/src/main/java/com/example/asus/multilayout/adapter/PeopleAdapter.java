@@ -2,6 +2,7 @@ package com.example.asus.multilayout.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,9 +41,6 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.PeopleHotV
     @Override
     public void onBindViewHolder(PeopleHotViewHolder holder, int position) {
         final PeopleBean people = peopleHot.get(position);
-
-
-
     //    holder.name_tv.setText(people.name);
 
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);

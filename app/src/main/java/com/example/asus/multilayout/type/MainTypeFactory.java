@@ -1,5 +1,6 @@
 package com.example.asus.multilayout.type;
 
+import android.util.Log;
 import android.view.View;
 
 import com.example.asus.multilayout.R;

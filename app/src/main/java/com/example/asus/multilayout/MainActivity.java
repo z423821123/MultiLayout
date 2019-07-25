@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.example.asus.multilayout.adapter.MainAdapter;
 import com.example.asus.multilayout.bean.IMainBean;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     List<IMainBean> iMainBeanList;
     private IMainTypeFactory iMainTypeFactory;
     private List<PeopleBean> peopleBeanList = new ArrayList<>();
-    private PeopleListBean peopleListBean = new PeopleListBean(peopleBeanList);
+    private PeopleListBean peopleListBean;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,11 +55,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getData(List<IMainBean> iMainBean) {
+        peopleListBean = new PeopleListBean();
         peopleBeanList.add(new PeopleBean("111","张三",null));
         peopleBeanList.add(new PeopleBean("111","李三",null));
         peopleBeanList.add(new PeopleBean("111","王五",null));
 
+        peopleListBean.setPeopleBeanList(peopleBeanList);
         iMainBean.add(peopleListBean);
+
         iMainBean.add(new PropertyBean("最新"));
 
         List<CommentData> rowsBeanList = new ArrayList<>();
@@ -70,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         rowsBeanList.add(rowsBean3);
 
         CommentListBean commentListBean = new CommentListBean(rowsBeanList);
+
         iMainBeanList.add(commentListBean);
 
         mDataAdapter.notifyDataSetChanged();

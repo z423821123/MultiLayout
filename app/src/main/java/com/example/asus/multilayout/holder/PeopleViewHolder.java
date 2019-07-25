@@ -2,6 +2,7 @@ package com.example.asus.multilayout.holder;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 
 import com.example.asus.multilayout.R;
@@ -36,9 +37,9 @@ public class PeopleViewHolder extends MainViewHolder{
 
     @Override
     public void bindItem(IMainBean iMainBean) {
-        PeopleListBean productList = (PeopleListBean) iMainBean;
-        List<PeopleBean> products = productList.peopleBeanList;
-        peopleAdapter.setData(products);
+        PeopleListBean peopleListBean = (PeopleListBean) iMainBean;
+        List<PeopleBean> peopleBeans = peopleListBean.peopleBeanList;
+        peopleAdapter.setData(peopleBeans);
         peopleAdapter.notifyDataSetChanged();
     }
 }
